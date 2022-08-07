@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% static "css/calendar.css" %}
+
+{% block main %}
+<div class="container bg-light">
+    <div class="row p-2">
+        <div class="col-md-4 p-2 my-2 border">
+            <img src="/{{object.image}}" width="100%" class ="bg-white">
+        </div>
+        <div class="col-md-4 my-2 ml-2 ">
+            <a>{{object.name}}</a>
+            <p>{{object.place}}</p>
+            <p>1人あたり:¥{{object.price}}</p>
+            <p>実施期間:{object.days}</p>
+            <p>最低限のスキル:{object.skills}</p>
+            <p>{{object.description}}</p>
+            <form action="/cart/add" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="company_pk" value="{{object.pk}}">
+                <p><input type="number" name="quantity" value="1" min = "0" max="{{object.stock}}" ></p>
+                <p><button type="submit" class="btn btn-success">Add to cart</button></p>
+            </form>
+        </div>
+        <div class="col-md-4 my-2 ">
+            {% include 'snippets/calendar.html' %}
+        </div>
+    </div>
+ </div>
+
+   
+
+    
+</div>
+{% endblock %}

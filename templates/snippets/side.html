@@ -1,0 +1,48 @@
+{% load bootstrap_icons %}
+{% include 'snippets/icon.html'%}
+  <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
+    <a href="/" class="d-block p-3 link-dark text-decoration-none" title="アイコンのみ" data-bs-toggle="tooltip" data-bs-placement="right">
+      <svg class="bi" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      <span class="visually-hidden">アイコンのみ</span>
+    </a>
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+      <li class="nav-item">
+        <a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" title="ホーム" data-bs-toggle="tooltip" data-bs-placement="right">
+          <svg class="bi" width="24" height="24" role="img" aria-label="ホーム"><use xlink:href="#home"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link py-3 border-bottom rounded-0" title="ダッシュボード" data-bs-toggle="tooltip" data-bs-placement="right">
+          <svg class="bi" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link py-3 border-bottom rounded-0" title="注文" data-bs-toggle="tooltip" data-bs-placement="right">
+          <svg class="bi" width="24" height="24"><use xlink:href="#table"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link py-3 border-bottom rounded-0" title="製品" data-bs-toggle="tooltip" data-bs-placement="right">
+          <svg class="bi" width="24" height="24"><use xlink:href="#grid"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link py-3 border-bottom rounded-0" title="顧客" data-bs-toggle="tooltip" data-bs-placement="right">
+          <svg class="bi" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+        </a>
+      </li>
+    </ul>
+    <div class="dropdown border-top">
+      <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="" alt="mdo" width="24" height="24" class="rounded-circle">
+      </a>
+      
+      <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+        <li><a class="dropdown-item" href="#">新プロジェクト...</a></li>
+        <li><a class="dropdown-item" href="#">設定</a></li>
+        <li><a class="dropdown-item" href="#">プロフィール</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">サインアウト</a></li>
+      </ul>
+    </div>
+  </div>
